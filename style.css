@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: url('./pexels-fauxels-3183132.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+    position: relative;
+}
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #102a42c2;
+    z-index: -1;
+    opacity: .7;
+}
+img {
+    width: 200px;
+    max-width: 100%;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 2.2rem;
+    width: 85vw;
+    margin: 0 auto;
+}
+.container .img {
+    /* flex: 1; */
+    width: 100%;
+    height: 100%;
+}
+.container .img  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .info {
+    /* flex: 1; */
+}
+.container .info h2 {
+    letter-spacing: 2.3px;
+    color: #fff;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+.container .info h4 {
+    font-size: 20px;
+    letter-spacing: 2.5px;
+    color: #ddd;
+}
+.container .info p {
+    color: #d7d1d1;
+    margin: 20px 0 27px;
+    line-height: 1.6;
+}
+.container .info .counter {
+    display: flex;
+    align-items: center;
+
+}
+.container .info .counter span {
+    background-color: #102a42;
+    padding: 8px 16px;
+    margin-right: 17px;
+    text-align: center;
+    color: #FFF;
+}
+.container .info .counter span .num{
+    font-size: 40px;
+    font-weight: bold;
+}
+.container .info .counter span div:not(:first-child)  {
+    text-transform: uppercase;
+
+}
+@media(max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr;
+        margin: 30px auto;
+    }
+    .container .info h2 {
+        font-size: 22px;
+    }
+    .container .info .counter {
+        column-gap: 10px;
+    }
+    .container .info .counter span {
+        margin: 0;
+    }
+    .container .info .counter span .num {
+        font-size: 30px;
+    }
+    .container .info .counter span div:not(:first-child) {
+        font-size: 14px;
+    }
+}
